@@ -23,10 +23,9 @@ a{text-decoration:none;color:var(--text);}
 nav{background:var(--menu-bg); display:flex; justify-content:center; position:sticky; top:0; z-index:99;}
 nav ul{display:flex; list-style:none; gap:20px; padding:10px 0; margin:0; flex-wrap:wrap;}
 nav a{font-weight:600; color:#000;}
-header{text-align:center; padding:30px 20px; max-width:var(--maxw); margin:0 auto;}
+header{text-align:center; padding:20px;}
 header h1{font-size:28px; margin:0 0 10px;}
 header p{font-size:16px; color:var(--muted); margin:0;}
-.hero img{width:100%; max-width:500px; height:auto; border-radius:var(--radius); margin-top:20px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
 section{padding:30px 20px;}
 h2{font-size:24px; margin-bottom:20px; text-align:center;}
 .products{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:15px; max-width:var(--maxw); margin:0 auto;}
@@ -50,7 +49,6 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
   header h1{font-size:24px;}
   header p{font-size:14px;}
   h2{font-size:20px;}
-  .hero img{max-width:100%; margin-top:15px;}
   .products{grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px;}
   .product-card img{height:120px;}
   .product-info{padding:6px;}
@@ -65,18 +63,11 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 <body>
 <nav>
   <ul>
-    <li><a href="#hero">Home</a></li>
     <li><a href="#products">Motorbikes</a></li>
     <li><a href="#pricing">Pricing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
-
-<header id="hero">
-  <h1>Hanoi Motorbike Rental – Nguyen Tu</h1>
-  <p>Reliable & affordable motorbike rental in Hanoi. We offer scooters, automatic bikes, electric bikes. Open daily 09:00 – 21:00.</p>
-  <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/10/motorbike.jpeg" alt="Hanoi Motorbike Rental Hero Banner">
-</header>
 
 <section id="products">
   <h2>Our Motorbikes for Rent</h2>
@@ -86,7 +77,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <div class="product-info">
         <h3>Honda Vision</h3>
         <p>Scooter / Automatic</p>
-        <p>$8-9 per day</p>
+        <p>$5-6 per day</p>
       </div>
     </div>
     <div class="product-card">
@@ -94,7 +85,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <div class="product-info">
         <h3>Honda Wave</h3>
         <p>Standard / Manual</p>
-        <p>$6-7 per day</p>
+        <p>$5-6 per day</p>
       </div>
     </div>
     <div class="product-card">
@@ -102,7 +93,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <div class="product-info">
         <h3>Yamaha Mio Classico</h3>
         <p>Scooter / Automatic</p>
-        <p>$6 per day</p>
+        <p>$5-6 per day</p>
       </div>
     </div>
     <div class="product-card">
@@ -110,7 +101,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <div class="product-info">
         <h3>Honda Click</h3>
         <p>Scooter / Automatic</p>
-        <p>$6-7 per day</p>
+        <p>$5-6 per day</p>
       </div>
     </div>
     <div class="product-card">
@@ -118,7 +109,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <div class="product-info">
         <h3>Honda Air Blade</h3>
         <p>Scooter / Automatic</p>
-        <p>$8-9 per day</p>
+        <p>$5-6 per day</p>
       </div>
     </div>
     <div class="product-card">
@@ -139,10 +130,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <tr><th>Bike Type</th><th>Price 1 Day</th><th>Price 3+ Days</th><th>Price 1 Month</th><th>Deposit</th></tr>
     </thead>
     <tbody>
-      <tr><td>Honda Wave</td><td>150k VND</td><td>Discount</td><td>1-2M VND</td><td>2-3M VND</td></tr>
-      <tr><td>Honda Vision</td><td>200k VND</td><td>Discount</td><td>1.8-2M VND</td><td>4-5M VND</td></tr>
-      <tr><td>Honda Air Blade</td><td>200k VND</td><td>Discount</td><td>1.4M VND</td><td>3M VND</td></tr>
-      <tr><td>Honda Click / Mio</td><td>150k VND</td><td>Discount</td><td>1-1.2M VND</td><td>2M VND</td></tr>
+      <tr><td>All Bikes</td><td>$5-6</td><td>Discount</td><td>1-2M VND</td><td>2-5M VND</td></tr>
     </tbody>
   </table>
 </section>
