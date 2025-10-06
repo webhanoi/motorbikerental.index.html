@@ -10,10 +10,11 @@
 <link rel="canonical" href="https://thuexemaynguyentu.com/">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
+<!-- Geo / Local tags -->
 <meta name="geo.region" content="VN-64">
 <meta name="geo.placename" content="Hanoi">
 <meta name="geo.position" content="21.033;105.85">
-<meta name="ICBM" content="21.033, 105.85">
+<meta name="ICBM" content="21.033,105.85">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
@@ -23,7 +24,7 @@
 <meta property="og:url" content="https://thuexemaynguyentu.com/">
 <meta property="og:site_name" content="Nguyen Tu Motorbike Rental">
 <meta property="og:image" content="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/honda-wave.jpg">
-<meta property="og:image:alt" content="Honda Wave — Hanoi motorbike rental">
+<meta property="og:image:alt" content="Hanoi motorbike rental">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
@@ -32,11 +33,13 @@
 <meta name="twitter:description" content="Reliable motorcycle rental Hanoi — scooters, automatic & electric bikes. Call 0942467674.">
 <meta name="twitter:image" content="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/honda-wave.jpg">
 
+<!-- Favicons -->
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="msapplication-TileColor" content="#000000">
 
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -84,6 +87,10 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:30px 20px;te
 .quick-buttons{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px}
 .quick-buttons a{background:var(--primary);padding:10px 14px;border-radius:8px;font-weight:700;color:#000}
 #backToTop{position:fixed;right:18px;bottom:18px;padding:10px;border-radius:8px;border:none;background:var(--primary);cursor:pointer;display:none}
+
+/* Fade-in */
+.fade-in {opacity:0; transform:translateY(20px); transition:opacity 1s ease-out, transform 1s ease-out;}
+.fade-in.visible {opacity:1; transform:translateY(0);}
 @media(max-width:480px){header h1{font-size:20px}}
 </style>
 </head>
@@ -101,8 +108,8 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:30px 20px;te
 
 <div class="breadcrumb" aria-label="Breadcrumb">
   <ol>
-    <li><a href="/">Home</a> ›</li>
-    <li><a href="/motorbike-rental-hanoi/">Motorbike Rental</a> ›</li>
+    <li><a href="https://webhanoi.github.io/motorbikerental.index.html/">Home</a> ›</li>
+    <li><a href="https://webhanoi.github.io/motorbikerental.index.html/#about">Motorbike Rental</a> ›</li>
     <li>Nguyen Tu</li>
   </ol>
 </div>
@@ -173,7 +180,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:30px 20px;te
       <div class="review-track" id="reviewTrack">
         <div class="review"><p>"Great bikes, smooth ride!"</p><strong>- Linh</strong></div>
         <div class="review"><p>"Best motorcycle rental Hanoi — great price!"</p><strong>- Huy</strong></div>
-        <div <div class="review"><p>"Reliable and friendly service."</p><strong>- Mai</strong></div>
+        <div class="review"><p>"Reliable and friendly service."</p><strong>- Mai</strong></div>
       </div>
     </div>
   </section>
@@ -207,7 +214,7 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:30px 20px;te
     <div class="quick-buttons" role="navigation" aria-label="Quick actions">
       <a href="tel:+84942467674">Call Now</a>
       <a href="https://api.whatsapp.com/send?phone=84942467674" target="_blank" rel="noopener">WhatsApp</a>
-      <a href="https://thuexemaynguyentu.com/pricing" target="_blank" rel="noopener">See Pricing</a>
+      <a href="https://webhanoi.github.io/motorbikerental.index.html/#pricing" target="_blank" rel="noopener">See Pricing</a>
     </div>
 
     <p style="color:#fff;margin-top:18px">© 2025 Nguyen Tu Motorbike Rental | Motorcycle Rental Hanoi</p>
@@ -217,6 +224,16 @@ footer{background:var(--footer-bg);color:var(--footer-text);padding:30px 20px;te
 <button id="backToTop" aria-label="Back to top">↑</button>
 
 <script>
+// Fade-in chữ
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElems = document.querySelectorAll("header h1, header p, main h2, main p, .product-info h3, .product-info p, footer h2, footer p");
+  fadeElems.forEach((el,i)=>{
+    el.classList.add("fade-in");
+    setTimeout(()=>{el.classList.add("visible");}, i*150);
+  });
+});
+
+// FAQ toggle
 document.querySelectorAll('.faq-item button').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     const expanded = btn.getAttribute('aria-expanded') === 'true';
@@ -224,21 +241,20 @@ document.querySelectorAll('.faq-item button').forEach(btn=>{
     btn.parentElement.classList.toggle('active');
   });
 });
+
+// Simple reviews carousel
 (function(){
   const track = document.getElementById('reviewTrack');
-  let idx = 0;
-  const len = track.children.length;
-  if(len <= 1) return;
-  setInterval(()=>{
-    idx = (idx + 1) % len;
-    track.style.transform = `translateX(-${idx * 100}%)`;
-  }, 4500);
+  let idx=0,len=track.children.length;
+  if(len<=1) return;
+  setInterval(()=>{ idx=(idx+1)%len; track.style.transform=`translateX(-${idx*100}%)`;},4500);
 })();
-const backBtn = document.getElementById('backToTop');
-window.addEventListener('scroll', ()=>{
-  backBtn.style.display = (document.documentElement.scrollTop > 200) ? 'block' : 'none';
-});
-backBtn.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
+
+// Back to top button
+const backBtn=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{backBtn.style.display=(document.documentElement.scrollTop>200)?'block':'none';});
+backBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
+
 </body>
 </html>
