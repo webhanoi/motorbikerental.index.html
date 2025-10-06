@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hanoi Motorbike Rental | Nguyen Tu</title>
+<meta name="description" content="Nguyen Tu Motorbike Rental in Hanoi offers affordable and reliable motorbike rentals including scooters, automatic bikes, and electric bikes. Call, WhatsApp, or view map to rent now!">
+<meta name="robots" content="index, follow">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
 :root{
-  --primary:#FFD700; /* vàng chủ đạo */
+  --primary:#FFD700; 
   --text:#000;
   --menu-bg:#eee;
   --footer-bg:#000;
@@ -44,6 +45,19 @@ h2{font-size:24px; margin-bottom:20px; text-align:center;}
 .contact{background:#fff8dc; text-align:center; border-radius:var(--radius); padding:20px;}
 .contact a.btn{display:inline-block; margin:5px; padding:10px 15px; border-radius:6px; background:var(--primary); color:#000; font-weight:600; font-size:14px;}
 footer{background:var(--footer-bg); color:var(--footer-text); text-align:center; padding:15px; margin-top:30px;}
+.quick-buttons{display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:15px;}
+.quick-buttons a{padding:12px 18px; background:var(--primary); color:#000; font-weight:600; border-radius:8px; text-decoration:none; font-size:14px;}
+.reviews{max-width:var(--maxw); margin:30px auto; overflow:hidden; position:relative;}
+.review-track{display:flex; transition:transform 0.5s ease;}
+.review{min-width:100%; padding:20px; box-sizing:border-box; text-align:center; background:#fff8dc; border-radius:var(--radius); margin-right:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.review p{font-style:italic; margin-bottom:5px;}
+.review strong{display:block; margin-top:5px;}
+.faq{max-width:800px; margin:30px auto;}
+.faq-item{border-bottom:1px solid #ddd; padding:10px 0;}
+.faq-item button{width:100%; text-align:left; padding:10px; font-size:16px; background:#ffd700; border:none; outline:none; cursor:pointer; border-radius:6px; font-weight:600; transition: background 0.3s;}
+.faq-item button:hover{background:#ffc700;}
+.faq-item .answer{padding:0 10px; max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; font-size:14px; background:#fff8dc; border-radius:6px; margin-top:5px;}
+.faq-item.active .answer{padding:10px; max-height:500px;}
 @media(max-width:480px){
   header h1{font-size:22px;}
   header p{font-size:14px;}
@@ -75,51 +89,27 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
   <div class="products">
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Xe-Ga-Honda-Vision.jpg" alt="Honda Vision">
-      <div class="product-info">
-        <h3>Honda Vision</h3>
-        <p>Scooter / Automatic</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Honda Vision</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
     </div>
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Cho-thue-xe-may-honda-Wave.jpeg" alt="Honda Wave">
-      <div class="product-info">
-        <h3>Honda Wave</h3>
-        <p>Standard / Manual</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Honda Wave</h3><p>Standard / Manual</p><p>$5-6 per day</p></div>
     </div>
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Yamaha-Mio-Classico.jpeg" alt="Yamaha Mio Classico">
-      <div class="product-info">
-        <h3>Yamaha Mio Classico</h3>
-        <p>Scooter / Automatic</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Yamaha Mio Classico</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
     </div>
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Honda-Click.jpeg" alt="Honda Click">
-      <div class="product-info">
-        <h3>Honda Click</h3>
-        <p>Scooter / Automatic</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Honda Click</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
     </div>
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Honda-Air-Blade.jpeg" alt="Honda Air Blade">
-      <div class="product-info">
-        <h3>Honda Air Blade</h3>
-        <p>Scooter / Automatic</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Honda Air Blade</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
     </div>
     <div class="product-card">
       <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Xe-Ga-50cc.jpeg" alt="Scooter 50cc">
-      <div class="product-info">
-        <h3>Scooter 50cc / Electric</h3>
-        <p>Scooter / Electric</p>
-        <p>$5-6 per day</p>
-      </div>
+      <div class="product-info"><h3>Scooter 50cc / Electric</h3><p>Scooter / Electric</p><p>$5-6 per day</p></div>
     </div>
   </div>
 </section>
@@ -127,14 +117,9 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 <section id="pricing" class="pricing">
   <h2>Rental Pricing</h2>
   <table>
-    <thead>
-      <tr><th>Bike Type</th><th>Price 1 Day</th><th>Price 3+ Days</th><th>Price 1 Month</th><th>Deposit</th></tr>
-    </thead>
+    <thead><tr><th>Bike Type</th><th>Price 1 Day</th><th>Price 3+ Days</th><th>Price 1 Month</th><th>Deposit</th></tr></thead>
     <tbody>
-      <tr><td>Honda Wave</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>Deposit</td></tr>
-      <tr><td>Honda Vision</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>Deposit</td></tr>
-      <tr><td>Honda Air Blade</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>Deposit</td></tr>
-      <tr><td>Honda Click / Mio</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>Deposit</td></tr>
+      <tr><td>All Motorbikes</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>2-5M VND</td></tr>
     </tbody>
   </table>
 </section>
@@ -142,12 +127,44 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 <section id="contact" class="contact">
   <h2>Contact Nguyen Tu Motorbike Rental</h2>
   <p>Address: 112 Nguyen Van Cu, Bo De, Long Bien, Hanoi, Vietnam</p>
-  <p>Phone: <a href="tel:0942467674">0942467674</a> | Zalo: <a href="https://zalo.me/0942467674" target="_blank">Chat</a></p>
+  <p>Phone: <a href="tel:0942467674">0942467674</a></p>
+  <div class="quick-buttons">
+    <a href="tel:0942467674">Call Now</a>
+    <a href="https://api.whatsapp.com/send?phone=84942467674" target="_blank">WhatsApp</a>
+    <a href="https://maps.app.goo.gl/tTk72JDNDZzhK2V5A" target="_blank">View Map</a>
+  </div>
   <div>
     <a class="btn" href="https://m.facebook.com/motorbikeinhanoi/" target="_blank">Facebook</a>
-    <a class="btn" href="https://api.whatsapp.com/send?phone=84942467674" target="_blank">WhatsApp</a>
-    <a class="btn" href="https://maps.app.goo.gl/tTk72JDNDZzhK2V5A" target="_blank">View Map</a>
     <a class="btn" href="https://thuexemaynguyentu.com" target="_blank">Website</a>
+  </div>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+  <div class="reviews">
+    <div class="review-track">
+      <div class="review"><p>"Great bikes, smooth ride!"</p><strong>- Linh</strong></div>
+      <div class="review"><p>"Very convenient service."</p><strong>- Huy</strong></div>
+      <div class="review"><p>"Affordable & reliable."</p><strong>- Mai</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <button>Do I need a driving license?</button>
+      <div class="answer">No, 50cc scooters can be ridden without a license for local traffic.</div>
+    </div>
+    <div class="faq-item">
+      <button>Can you deliver the bike?</button>
+      <div class="answer">Yes, we deliver within Long Bien and central Hanoi.</div>
+    </div>
+    <div class="faq-item">
+      <button>What is the deposit?</button>
+      <div class="answer">Deposit ranges from 2-5 million VND depending on bike type.</div>
+    </div>
   </div>
 </section>
 
@@ -155,5 +172,23 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
   <p>© 2025 Nguyen Tu Motorbike Rental | Hanoi</p>
 </footer>
 
+<script>
+// FAQ accordion with smooth slide
+document.querySelectorAll('.faq-item button').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const parent = btn.parentElement;
+    parent.classList.toggle('active');
+  });
+});
+
+// Simple review carousel
+let track = document.querySelector('.review-track');
+let index = 0;
+setInterval(()=>{
+  index++;
+  if(index>=track.children.length) index=0;
+  track.style.transform = `translateX(-${index*100}%)`;
+},4000);
+</script>
 </body>
 </html>
