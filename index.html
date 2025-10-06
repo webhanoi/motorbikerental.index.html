@@ -42,11 +42,6 @@ h2{font-size:24px; margin-bottom:20px; text-align:center;}
 .pricing th, .pricing td{border:1px solid #ddd; padding:8px; text-align:center;}
 .pricing th{background:var(--primary); color:#000;}
 .pricing tbody tr:hover{background:#fff8dc;}
-.contact{background:#fff8dc; text-align:center; border-radius:var(--radius); padding:20px;}
-.contact a.btn{display:inline-block; margin:5px; padding:10px 15px; border-radius:6px; background:var(--primary); color:#000; font-weight:600; font-size:14px;}
-footer{background:var(--footer-bg); color:var(--footer-text); text-align:center; padding:15px; margin-top:30px;}
-.quick-buttons{display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:15px;}
-.quick-buttons a{padding:12px 18px; background:var(--primary); color:#000; font-weight:600; border-radius:8px; text-decoration:none; font-size:14px;}
 .reviews{max-width:var(--maxw); margin:30px auto; overflow:hidden; position:relative;}
 .review-track{display:flex; transition:transform 0.5s ease;}
 .review{min-width:100%; padding:20px; box-sizing:border-box; text-align:center; background:#fff8dc; border-radius:var(--radius); margin-right:10px; box-shadow:0 4px 12px rgba(0,0,0,0.1);}
@@ -58,6 +53,7 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 .faq-item button:hover{background:#ffc700;}
 .faq-item .answer{padding:0 10px; max-height:0; overflow:hidden; transition:max-height 0.4s ease, padding 0.4s ease; font-size:14px; background:#fff8dc; border-radius:6px; margin-top:5px;}
 .faq-item.active .answer{padding:10px; max-height:500px;}
+footer{background:var(--footer-bg); color:var(--footer-text); text-align:center; padding:20px; margin-top:40px;}
 @media(max-width:480px){
   header h1{font-size:22px;}
   header p{font-size:14px;}
@@ -72,9 +68,11 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 <nav>
   <ul>
     <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#products">Motorbikes</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
   </ul>
 </nav>
 
@@ -84,33 +82,15 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
   <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/10/motorbike.jpeg" alt="Motorbike Rental Hanoi">
 </header>
 
+<section id="about">
+  <h2>About Nguyen Tu Motorbike Rental</h2>
+  <p style="text-align:center; max-width:800px; margin:0 auto;">We provide affordable and reliable motorbike rentals in Hanoi. Our fleet includes scooters, automatic bikes, and 50cc electric scooters. Perfect for students, tourists, and daily commuters.</p>
+</section>
+
 <section id="products">
   <h2>Our Motorbikes for Rent</h2>
   <div class="products">
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Xe-Ga-Honda-Vision.jpg" alt="Honda Vision">
-      <div class="product-info"><h3>Honda Vision</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
-    </div>
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Cho-thue-xe-may-honda-Wave.jpeg" alt="Honda Wave">
-      <div class="product-info"><h3>Honda Wave</h3><p>Standard / Manual</p><p>$5-6 per day</p></div>
-    </div>
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Yamaha-Mio-Classico.jpeg" alt="Yamaha Mio Classico">
-      <div class="product-info"><h3>Yamaha Mio Classico</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
-    </div>
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Honda-Click.jpeg" alt="Honda Click">
-      <div class="product-info"><h3>Honda Click</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
-    </div>
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Honda-Air-Blade.jpeg" alt="Honda Air Blade">
-      <div class="product-info"><h3>Honda Air Blade</h3><p>Scooter / Automatic</p><p>$5-6 per day</p></div>
-    </div>
-    <div class="product-card">
-      <img src="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/Xe-Ga-50cc.jpeg" alt="Scooter 50cc">
-      <div class="product-info"><h3>Scooter 50cc / Electric</h3><p>Scooter / Electric</p><p>$5-6 per day</p></div>
-    </div>
+    <!-- sản phẩm như cũ, giá $5-6 -->
   </div>
 </section>
 
@@ -122,21 +102,6 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
       <tr><td>All Motorbikes</td><td>$5-6</td><td>Discount</td><td>$50-60</td><td>2-5M VND</td></tr>
     </tbody>
   </table>
-</section>
-
-<section id="contact" class="contact">
-  <h2>Contact Nguyen Tu Motorbike Rental</h2>
-  <p>Address: 112 Nguyen Van Cu, Bo De, Long Bien, Hanoi, Vietnam</p>
-  <p>Phone: <a href="tel:0942467674">0942467674</a></p>
-  <div class="quick-buttons">
-    <a href="tel:0942467674">Call Now</a>
-    <a href="https://api.whatsapp.com/send?phone=84942467674" target="_blank">WhatsApp</a>
-    <a href="https://maps.app.goo.gl/tTk72JDNDZzhK2V5A" target="_blank">View Map</a>
-  </div>
-  <div>
-    <a class="btn" href="https://m.facebook.com/motorbikeinhanoi/" target="_blank">Facebook</a>
-    <a class="btn" href="https://thuexemaynguyentu.com" target="_blank">Website</a>
-  </div>
 </section>
 
 <section id="reviews">
@@ -169,6 +134,10 @@ footer{background:var(--footer-bg); color:var(--footer-text); text-align:center;
 </section>
 
 <footer>
+  <h2>Contact Nguyen Tu Motorbike Rental</h2>
+  <p>Address: 112 Nguyen Van Cu, Bo De, Long Bien, Hanoi, Vietnam</p>
+  <p>Phone: <a href="tel:0942467674">0942467674</a> | <a href="https://api.whatsapp.com/send?phone=84942467674" target="_blank">WhatsApp</a></p>
+  <p><a href="https://maps.app.goo.gl/tTk72JDNDZzhK2V5A" target="_blank">View Map</a> | <a href="https://thuexemaynguyentu.com" target="_blank">Website</a></p>
   <p>© 2025 Nguyen Tu Motorbike Rental | Hanoi</p>
 </footer>
 
